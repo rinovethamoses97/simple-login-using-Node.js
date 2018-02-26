@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title></title>
+</head>
+<body>
+<h1 id="welcome">welcome </h1>
+<input type="button" value="logout" onclick="logout()">
+</body>
+<script type="text/javascript">
+	window.onload=function()
+	{
+
+			$.get("cookieget", function(data, status){
+			var myObj = JSON.parse(data);
+        	
+        	document.getElementById("welcome").append(" "+myObj.name);
+    		});
+	}
+	function logout()
+	{
+		location="logout";
+	}
+</script>
+</html>
