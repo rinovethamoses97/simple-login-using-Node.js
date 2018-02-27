@@ -1,19 +1,36 @@
 <html>
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
+		.fa {
+	display: none;
+    margin-left: -12px;
+    margin-right: 8px;
+}
+	</style>
 	</head>
 <body>
 <div class="w3-container w3-blue">
 <h1 class="w3-center w3-animate-top">Welcome to My new Page</h1>
 </div>
 <br><br>
-<form method="post" action="process" class="w3-container w3-center" style="width:30%;margin-left: 35%" >
+<form method="post" action="process" class="w3-container w3-center" style="width:30%;margin-left: 35%" onsubmit="play()">
 <label>Username</label>
 <input type="text"  name="username" required class="w3-input"><br>
 <label>Password</label>
-<input type="text" name="password" required class="w3-input"><br>
-<input type="submit">
+<input type="password" name="password" required class="w3-input"><br>
+
+<button class="w3-button w3-white w3-border w3-border-blue w3-round-large" type="submit" ><i class="fa fa-spinner fa-spin" id="loader"></i>Submit</button>
 </form>
 
 </body>
+<script type="text/javascript">
+	function play()
+	{
+        var a=document.getElementById("loader");
+        a.style.display="block";
+        a.style.display="inline-block";
+	}
+</script>
 </html>
